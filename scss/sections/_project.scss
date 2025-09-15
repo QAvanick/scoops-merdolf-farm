@@ -1,0 +1,86 @@
+/*========================================*/
+/*---------- [_Section_Project] ----------*/
+/*========================================*/
+.project-section {
+	.project-filter {
+		ul {
+			li {
+				display: inline-block;
+				border: 1px solid #ab2a78;
+				padding: 8px 20px;
+				margin-right: 10px;
+				margin-bottom: 10px;
+				cursor: pointer;
+				color: #373959;
+				font-weight: 500;
+
+				&:hover, &.active {
+					background: $bg-gradient-color;
+					color: #fff;
+					@include transition(all 0.2s ease-in-out);
+				}
+			}
+		}
+	}
+}
+.project-item {
+	position: relative;
+	overflow: hidden;
+	.project-overlay {
+		position: absolute;
+		left: 0;
+		bottom: 0;
+		padding: 20px;
+		z-index: 1;
+		width: 100%;
+		@include transition(all 0.4s ease-in-out);
+		@include transform(translate(0, 100%));
+		background: $bg-gradient-color;
+		a {
+			&:hover {
+				color: #fff;
+			}
+		}
+	}
+	.link-single-page {
+		a {
+			position: absolute;
+			z-index: 2;
+			top: -15px;
+			right: 15px;
+			width: 48px;
+			height: 48px;
+			background: $bg-gradient-color;
+			text-align: center;
+			line-height: 58px;
+			color: #fff;
+			visibility: hidden;
+			opacity: 0;
+			@include transition(all 0.4s ease-in-out);
+		}
+	}
+	&:hover {
+		.project-overlay {
+			transform: translateY(0);
+			@include transform(translate(0, 0));
+		}
+	}
+	&:hover {
+		.link-single-page {
+			a {
+				visibility: visible;
+				opacity: 1;
+				top: 15px;
+			}
+		}
+		img {
+			-webkit-transform: scale(1.1);
+			transform: scale(1.1);
+		}
+	}
+	img {
+		width: 100%;
+		-webkit-transition: 1s;
+		transition: 1s;
+	}
+}

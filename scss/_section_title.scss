@@ -1,0 +1,20 @@
+/*========================================*/
+/*----------- [_Section_Title] -----------*/
+/*========================================*/
+.section-title {
+  margin-bottom: 60px;
+  .sub-title {
+	  font-weight: 400;
+	  margin-bottom: 5px;
+	  font-size: 16px;
+	}
+}
+.subtitle-block {
+  background: $bg-gradient-color;
+  display: inline-block;
+  color: #fff;
+  padding: 3px 16px;
+  font-size: 13px;
+  border-radius: 6px;
+  margin-bottom: 20px;
+}

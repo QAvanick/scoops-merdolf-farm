@@ -1,0 +1,32 @@
+//======= Bg Color Variables ========// 
+$body-font-color: #494b51;
+$heading-font-color: #2b2350;
+$bg-white: #ffffff;
+$bg-silver: #F4F5F8;
+$bg-silver-deep: #ecdaee;
+$bg-gray: #f7f7f7;
+$bg-primary-color: #E41F7A;
+$bg-secondary-color: #3d3d68;
+$bg-dark-color: #0B0C26;
+$bg-blue-color: #571bcd;
+$gradient-color1: #e41f7a;
+$gradient-color2: #604183;
+$bg-gradient-color: linear-gradient(45deg, $gradient-color1, $gradient-color2) !important;
+$bg-gradient-reverse-color: linear-gradient(-20deg, $gradient-color1, $gradient-color2) !important;
+//======= Text Color Variables ========// 
+$text-white: #ffffff;
+$text-light-gray: #9d98bf;
+$text-silver: #f5f3f1;
+$text-gray: #a4a4aa;
+$text-gray-light: #CCCCCC;
+$text-dark-light: #808093;
+$text-primary-color: $bg-primary-color;
+$text-secondary-color: $bg-secondary-color;
+$heading-text-color :$bg-secondary-color;
+$heading-text-color :$bg-secondary-color;
+//========== Font Family ========== //
+$montserrat-font: 'Montserrat', sans-serif;
+$playfair-display-font: 'Playfair Display', serif;
+
+$body-font: $montserrat-font;
+$heading-font: $montserrat-font;

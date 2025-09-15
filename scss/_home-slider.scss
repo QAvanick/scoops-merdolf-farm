@@ -1,0 +1,17 @@
+/*========================================*/
+/*------------- [_Home_Slider] -----------*/
+/*========================================*/
+
+.slider-wrapper {
+  height: 960px;
+  background-color: #FAEAE5;
+  background-position: center center;
+  background-size: cover;
+  .banner-title {
+    font-size: 72px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    line-height: 1.1;
+    text-transform: capitalize;
+  }
+}

@@ -1,0 +1,39 @@
+/*========================================*/
+/*------------- [_demo_style] ------------*/
+/*========================================*/
+.demo-home-area {
+	padding: 200px 0;
+}
+.demo-home-text {
+	line-height: 1.4;
+}
+.demo-number a {
+	text-align: center;
+	background: #fff;
+	width: 100%;
+	display: inline-block;
+	padding: 20px;
+	transition: 400ms;
+	border: 1px solid #ddd;
+}
+.demo-number .coming-soon {
+	text-align: center;
+	background: #fff;
+	width: 100%;
+	display: inline-block;
+	padding: 20px;
+	transition: 400ms;
+	border: 1px solid #ddd;
+}
+.demo-item {
+	box-shadow: 3px 5px 25px 0 rgba(0, 0, 0, 0.1);
+	margin-bottom: 60px;
+	transition: 400ms;
+}
+.demo-item:hover .demo-number a {
+	background: $bg-gradient-color;
+	color: #fff;
+}
+.demo-item:hover {
+	transform: translateY(-8px);
+}

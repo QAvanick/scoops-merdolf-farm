@@ -1,0 +1,36 @@
+/*========================================*/
+/*---------- [_Section_About] ------------*/
+/*========================================*/
+.about-icon {
+	color: $bg-secondary-color;
+	font-weight: 600;
+}
+.about-list {
+    display: inline-block;
+}
+.about-contact-btn {
+    margin-right: 60px;
+    position: relative;
+    display: inline;
+}
+.about-contact-btn:after {
+	position: absolute;
+	content: "";
+	height: 55%;
+	width: 1px;
+	background: #ccc;
+	top: 10px;
+	right: -35px;
+}
+.about-icon i {
+	height: 48px;
+	width: 48px;
+	line-height: 48px;
+	display: inline-block;
+	background: #fff;
+	text-align: center;
+	margin-right: 15px;
+	border-radius: 50%;
+	color: $bg-primary-color;
+	box-shadow: 0 8px 16px 0 rgba(182, 173, 174, 0.3);
+}

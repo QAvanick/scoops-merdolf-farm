@@ -1,0 +1,60 @@
+/*========================================*/
+/*------ [_Section_Single_Service] -------*/
+/*========================================*/
+
+.service-description {
+	margin-left: 30px;
+}
+.service-description .title {
+	margin-bottom: 10px;
+}
+.service-link-list li a {
+	display: block;
+	background: #eef4f8;
+	color: #40436a;
+	padding: 12px 25px;
+	font-size: 16px;
+	font-weight: normal;
+	position: relative;
+	font-weight: 500;
+	margin-bottom: 5px;
+	@include transition(all 300ms ease-out 0s);
+	border: 1px solid #d7e2e6;
+	position: relative;
+}
+.service-link-list li a:after, .service-link-list li.active a:after {
+	position: absolute;
+	content: "";
+	height: 50%;
+	background: #E41F7A;
+	left: -3px;
+	width: 5px;
+	top: 0;
+	opacity: 0;
+	@include transform(translate(0, 50%));
+	@include transition(all 300ms ease-out 0s);
+}
+.service-link-list li a:hover:after, .service-link-list li.active a:after {
+	opacity: 1;
+}
+.service-link-list li.active a {
+	color: $bg-primary-color;
+	padding-left: 30px;
+}
+.service-link-list li a:hover {
+	color: $bg-primary-color;
+	padding-left: 30px;
+}
+.service-link-list li a i {
+	margin-right: 10px;
+	font-size: 13px;
+}
+.service-section-title-area {
+	background: $bg-blue-color;
+	padding: 90px 0 240px;
+	margin: 0 110px;
+	margin-top: -180px;
+}
+.service-section-content {
+	margin-top: -180px;
+}

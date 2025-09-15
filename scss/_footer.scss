@@ -1,0 +1,36 @@
+/*========================================*/
+/*-------------- [_Footer] ---------------*/
+/*========================================*/
+.footer-main-area {
+  background: #232235;
+  padding: 90px 0 60px;
+}
+.footer-bottom-area {
+	background: #27273F;
+	padding: 20px 0;
+}
+.footer-widget {
+	margin-bottom: 40px;
+	display: inline-block;
+}
+.footer-widget-list {
+	li {
+		display: inherit;
+		margin-bottom: 10px;
+		a {
+			color: $text-light-gray;
+			position: relative;
+			padding-left: 25px;
+      &:before {
+        position: absolute;
+        content: '\f105';
+        left: 0px;
+        top: -3px;
+        font-family: 'FontAwesome';
+      }	      
+			&:hover {
+				color:$bg-primary-color;
+			}
+		}
+	}
+}

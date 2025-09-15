@@ -1,0 +1,88 @@
+/*========================================*/
+/*---------- [_Section_Team] -------------*/
+/*========================================*/
+.team-block .team-upper-part {
+    position: relative;
+    overflow: hidden;
+}
+.team-block .team-upper-part .social-list {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+}
+.team-block .team-upper-part .social-list.vertical-style li {
+    float: none;
+    display: list-item;
+    margin-right: 5px;
+    margin-bottom: 5px;
+}
+.team-block .team-upper-part .social-list.vertical-style li a {
+    border-radius: 4px;
+    background: $bg-gradient-color;
+}
+
+.social-list.vertical-style li {
+	opacity: 0;
+	transform: translateY(-60px);
+	transition: .3s ease-out all;
+}
+
+.team-block:hover .social-list.vertical-style li:nth-child(1) {
+	transition-delay: .3s;
+}
+
+.team-block:hover .social-list.vertical-style li:nth-child(2) {
+	transition-delay: .2s;
+}
+
+.team-block:hover .social-list.vertical-style li:nth-child(3) {
+	transition-delay: .1s;
+}
+
+.team-block:hover .social-list.vertical-style li {
+	opacity: 1;
+	transform: translateY(0);
+}
+
+
+.team-block .team-bottom-part {
+    background: #f7f7f7;
+    padding: 20px;
+    position: relative;
+}
+.team-block:hover .team-bottom-part .team-title {
+    z-index: 1;
+    color: #fff;
+    position: sticky;
+}
+.team-block:hover .team-bottom-part .team-title a {
+    color: #fff;
+}
+.team-block:hover .team-bottom-part .designation {
+    z-index: 1;
+    position: sticky;
+    color: #fff;
+}
+.team-block .team-bottom-part .designation {
+    color: #e41f7a;
+}
+.team-block .team-bottom-part:after {
+    background: $bg-gradient-color;
+    height: 5px;
+    width: 100%;
+    left: 0;
+    bottom: 0;
+    content: "";
+    transition: all 401ms;
+    position: absolute;
+    z-index: 0;
+}
+.team-block:hover .team-bottom-part:after {
+    height: 100%;
+    z-index: 0;
+}
+
+.personal-details-title {
+    line-height: 20px;
+    padding-bottom: 5px;
+}
