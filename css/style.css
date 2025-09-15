@@ -85,7 +85,7 @@
 }
 
 .bg-gradient-color {
-  background: linear-gradient(45deg, #c5df35, #604183) !important;
+  background: linear-gradient(45deg, #f9d342, #8B5A42) !important;
 }
 
 /*========================================*/
@@ -2088,7 +2088,7 @@ select {
 }
 
 .subtitle-block {
-  background: linear-gradient(45deg, #e41f7a, #604183) !important;
+  background: linear-gradient(45deg, #f9d342, #4caf50) !important;
   display: inline-block;
   color: #fff;
   padding: 3px 16px;

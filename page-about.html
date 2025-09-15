@@ -19,7 +19,23 @@
 	<link rel="stylesheet" href="css/style.css">
 	<link rel="stylesheet" href="css/responsive.css">
 
-
+<style>
+section[style*="background-image"] {
+  position: relative;
+}
+section[style*="background-image"]::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0, 0, 0, 0.6); /* Overlay noir à 60% */
+  z-index: 1;
+  pointer-events: none;
+}
+section[style*="background-image"] > * {
+  position: relative;
+  z-index: 2;
+}
+</style>
 
 	
 </head>
@@ -232,17 +248,29 @@
     <div class="row">
       <!-- Texte de présentation -->
       <div class="col-md-12 col-xl-6 wow fadeInRight" data-wow-delay="0ms" data-wow-duration="1000ms">
-        <h5 class="mrb-15 text-gray text-under-line">À propos de notre entreprise</h5>
+        <h5 class="mrb-15 text-dark text-under-line">À propos de notre entreprise</h5>
         <h2 class="mrb-30 font-54">
-          Nous sommes une <span class="playfair-display-font font-italic text-primary-color">équipe passionnée</span>, 
-          ancrée dans la <span class="playfair-display-font font-italic text-primary-color">terre</span> pour nourrir la nation.
-        </h2>
-        <p class="lead f-weight-600 mrb-30">
-          Exploitez pleinement les richesses de la terre grâce à des pratiques agricoles durables, responsables et efficaces.
-        </p>
-        <p class="mrb-40">
-          À SCOOPS MERDOLF FARM, ce ne sont pas seulement des machines ou des champs qui produisent — ce sont des hommes et des femmes fiers de leur travail. Agriculteurs, éleveurs, techniciens, gestionnaires : chacun joue un rôle essentiel dans une exploitation moderne, bien organisée et tournée vers l’avenir.
-        </p>
+  Notre <span class="playfair-display-font font-italic text-primary-color">Mission</span> & 
+  <span class="playfair-display-font font-italic text-primary-color">Vision</span>
+</h2>
+
+<p class="lead f-weight-600 mrb-30">
+  Produire local, sain et durable pour nourrir le Cameroun
+</p>
+
+<div class="mrb-40">
+  <h5 class="text-primary-color f-weight-700"><i class="fas fa-seedling mrr-10"></i>Mission</h5>
+  <p>
+    Mettre à la disposition du marché local et international des produits bio, de qualité supérieure et à prix raisonnable.
+  </p>
+</div>
+
+<div class="mrb-40">
+  <h5 class="text-primary-color f-weight-700"><i class="fas fa-bullseye mrr-10"></i> Vision</h5>
+  <p>
+    Devenir le plus grand pourvoyeur de poissons d’eau douce au Cameroun et la référence nationale en matière d’élevage de porcs.
+  </p>
+</div>
         <div class="about-list mrb-lg-60">
           <a href="#contact" class="about-contact-btn cs-btn-one btn-md btn-circle mrb-sm-30 display-sm-block">Contactez-nous</a>
           <!-- Tu peux garder ou supprimer la signature -->
@@ -264,65 +292,81 @@
   </div>
 </section>
 	<!-- About Section End -->
-	<!-- Funfact Section Start -->
-	<section class="pdt-110 pdb-50 section-white-typo" data-background="https://www.ydyle.fr/wp-content/uploads/2017/02/Les-secrets-d%E2%80%99une-bonne-page-a-propos-1.jpg" data-overlay-dark="3">
-		<div class="section-title text-center mrb-80">
-			<div class="container">
-				<div class="row">
-					<div class="col"></div>
-					<div class="col-xl-6">
-						<div class="section-title-block">
-							<h5 class="subtitle-block">Voir quelques faits</h5>
-							<h2 class="">Nous offrons le meilleur service pour votre entreprise</h2>
-						</div>
-					</div>
-					<div class="col"></div>
-				</div>
-			</div>
-		</div>
-		<div class="section-content">
-			<div class="container">
-				<div class="row">
-					<div class="col-md-6 col-lg-3 col-xl-3 wow fadeInUp" data-wow-delay="0ms" data-wow-duration="800ms">
-						<div class="funfact mrb-md-70 mrb-60">
-							<div class="icon">
-								<span class="webexflaticon flaticon-briefcase-1"></span>
-							</div>
-							<h2 class="counter">1450</h2>
-							<h5 class="title">Les projets réussissent</h5>
-						</div>
-					</div>
-					<div class="col-md-6 col-lg-3 col-xl-3 wow fadeInUp" data-wow-delay="200ms" data-wow-duration="800ms">
-						<div class="funfact mrb-md-70 mrb-60">
-							<div class="icon">
-								<span class="webexflaticon flaticon-like-3"></span>
-							</div>
-							<h2 class="counter">1864</h2>
-							<h5 class="title">Les gens aiment</h5>
-						</div>
-					</div>
-					<div class="col-md-6 col-lg-3 col-xl-3 wow fadeInUp" data-wow-delay="400ms" data-wow-duration="800ms">
-						<div class="funfact mrb-md-70 mrb-60">
-							<div class="icon">
-								<span class="webexflaticon flaticon-trophy-1"></span>
-							</div>
-							<h2 class="counter">1280</h2>
-							<h5 class="title">Récompenses obtenues</h5>
-						</div>
-					</div>
-					<div class="col-md-6 col-lg-3 col-xl-3 wow fadeInUp" data-wow-delay="600ms" data-wow-duration="800ms">
-						<div class="funfact mrb-md-70 mrb-60">
-							<div class="icon">
-								<span class="webexflaticon flaticon-employee-2"></span>
-							</div>
-							<h2 class="counter">678</h2>
-							<h5 class="title">Membres de l'équipe</h5>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
+	<section 
+  class="pdt-110 pdb-50 section-white-typo"
+  style="background-image: url('img/collage6.png'); 
+         background-size: cover; 
+         background-position: center; 
+         background-repeat: no-repeat;"
+  data-overlay-dark="3">
+  
+  <div class="section-title text-center mrb-80">
+    <div class="container">
+      <div class="row">
+        <div class="col"></div>
+        <div class="col-xl-6">
+          <div class="section-title-block">
+            <h5 class="subtitle-block">Nos Réalisations</h5>
+            <h2>Nous produisons local, naturel et durable<br>pour nourrir la nation</h2>
+          </div>
+        </div>
+        <div class="col"></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section-content">
+    <div class="container">
+      <div class="row">
+
+        <!-- Porcs élevés -->
+        <div class="col-md-6 col-lg-3 col-xl-3">
+          <div class="funfact mrb-md-70 mrb-60 text-center">
+            <div class="icon mbb-15">
+              <i class="fas fa-pig" style="font-size: 48px; color: #f9d342;"></i>
+            </div>
+            <h2 class="counter">200</h2>
+            <h5 class="title">Porcs élevés</h5>
+          </div>
+        </div>
+
+        <!-- Poissons produits -->
+        <div class="col-md-6 col-lg-3 col-xl-3">
+          <div class="funfact mrb-md-70 mrb-60 text-center">
+            <div class="icon mbb-15">
+              <i class="fas fa-fish" style="font-size: 48px; color: #f9d342;"></i>
+            </div>
+            <h2 class="counter">5000</h2>
+            <h5 class="title">Poissons par cycle</h5>
+          </div>
+        </div>
+
+        <!-- Hectares cultivés -->
+        <div class="col-md-6 col-lg-3 col-xl-3">
+          <div class="funfact mrb-md-70 mrb-60 text-center">
+            <div class="icon mbb-15">
+              <i class="fas fa-seedling" style="font-size: 48px; color: #f9d342;"></i>
+            </div>
+            <h2 class="counter">15</h2>
+            <h5 class="title">Ha de cultures</h5>
+          </div>
+        </div>
+
+        <!-- Familles approvisionnées -->
+        <div class="col-md-6 col-lg-3 col-xl-3">
+          <div class="funfact mrb-md-70 mrb-60 text-center">
+            <div class="icon mbb-15">
+              <i class="fas fa-users" style="font-size: 48px; color: #f9d342;"></i>
+            </div>
+            <h2 class="counter">350</h2>
+            <h5 class="title">Familles alimentées</h5>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
 	<!-- Funfact Section End -->
 	<!-- Team Section Start -->
 	<section class="pdt-110 pdb-80 abs-bg2" data-overlay-light="6">
@@ -333,7 +377,7 @@
 					<div class="col-xl-6">
 						<div class="section-title-block">
 							<h5 class="subtitle-block">Rencontrez notre équipe</h5>
-							<h2 class="">Nous offrons le meilleur service pour votre entreprise</h2>
+							<h2 class="">Une équipe engagée pour une agriculture durable</h2>
 						</div>
 					</div>
 					<div class="col"></div>
@@ -422,13 +466,20 @@
 			<div class="row">
 				<div class="col-lg-8 col-xl-8">
 					<div class="subscribe-content text-center text-lg-left">
-						<h3 class="text-white mrb-10 mrb-md-15 font-30">Creative Business Consulting Service Provider</h3>
-						<p class="text-white mrb-0 mrb-md-20">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure, eveniet.</p>
+						<h3 class="text-white mrb-10 mrb-md-15 font-30">Qualité garantie du champ à l’assiette</h3>
+						<p class="text-white mrb-0 mrb-md-20">Porcs, poissons et légumes frais élevés et cultivés localement.</p>
 					</div>
 				</div>
 				<div class="col-lg-4 col-xl-4">
 					<div class="action-btn text-center text-lg-right">
-						<a href="#" class="cs-btn-one btn-light mrt-10 f-weight-700">Devenez client</a>
+						<a 
+  href="https://wa.me/237696124911?text=Bonjour%20SCOOPS%20MERDOLF%20FARM%2C%20je%20souhaite%20passer%20une%20commande."
+  target="_blank"
+  class="cs-btn-one btn-gradient-color d-flex align-items-center justify-content-center"
+  style="font-size: 14px; padding: 12px 20px; white-space: nowrap;">
+  <i class="fab fa-whatsapp" style="margin-right: 8px;"></i>
+  Commandez via WhatsApp
+</a>
 					</div>
 				</div>
 			</div>
@@ -442,10 +493,10 @@
 				<div class="row">
 					<div class="col-xl-3 col-lg-6 col-md-6">
 						<div class="widget footer-widget">
-							<img src="img/logo-footer.png" alt="" class="mrb-20">
+							<span>LOGO SCOOPS MERDOLF FARM</span>
 							<address class="mrb-25">
-								<p class="text-light-gray">32 Dora Creek, tuntable creek, Nouvelle-Galles du Sud 2480, Australie</p>
-								<div class="display-inline-block mrb-5"><a href="#" class="text-light-gray"><i class="fa fa-phone mrr-10"></i>+088 234 432 15565</a></div>
+								<p class="text-light-gray">237 Meyo, Quartier Mbalan, Yaoundé, Cameroun</p>
+								<div class="display-inline-block mrb-5"><a href="#" class="text-light-gray"><i class="fa fa-phone mrr-10"></i>+237 696 12 49 11 / 699 55 86 41</a></div>
 								<div class="display-inline-block mrb-5"><a href="#" class="text-light-gray"><i class="fa fa-envelope-o mrr-10"></i>sample@yourdomain.com</a></div>
 								<div class="display-inline-block"><a href="#" class="text-light-gray"><i class="fa fa-globe mrr-10"></i>www.domainname.com</a></div>
 							</address>
@@ -495,18 +546,19 @@
 							<ul class="footer-widget-list">
 								<li><a href="#">Accueil</a></li>
 								<li><a href="#">À propos</a></li>
-								<li><a href="#">Equipes</a></li>
-								<li><a href="#">Services</a></li>
-								<li><a href="#">Nouvelles</a></li>
-								<li><a href="#">Politique</a></li>
-								<li><a href="#">Contact</a></li>
+								<li><a href="#">Nos Activités</a></li>
+								<li><a href="/CGV">CGV </a></li>
+								<li><a href="/CGU">CGU</a></li>
+								<li><a href="/politique">Politique</a></li>
+								<li><a href="/page-contact-us">Contact</a></li>
 							</ul>
 						</div>
 					</div>
 					<div class="col-xl-4 col-lg-6 col-md-6">
 						<div class="widget footer-widget">
 							<h5 class="widget-title text-white mrb-30">Newsletter</h5>
-							<p class="text-light-gray">Visualisez de manière transparente un capital intellectuel de qualité sans collaboration supérieure ni partage d'idées de manière listique</p>
+							<p class="text-light-gray">Restez au courant des nouveautés de la ferme : élevage, pisciculture, agriculture.
+Une production saine, locale, et durable — livrée dans votre boîte mail.</p>
 							<input type="text" class="form-control" placeholder="Entrez votre e-mail">
 							<a href="" class="cs-btn-one btn-gradient-color teadisplay-inline-block btn-sm has-icon mrt-20"><i class="webexflaticon flaticon-send"></i>Soumettre maintenant</a>
 						</div>
