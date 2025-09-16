@@ -4499,3 +4499,19 @@ select {
   transform: translateY(-2px);
   box-shadow: 0 6px 15px rgba(37, 211, 102, 0.4);
 }
+
+
+.image-zoom-wrapper img:hover {
+  transform: scale(1.08);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+.activity-card {
+  padding: 20px;
+  border-radius: 10px;
+  background: white;
+  transition: all 0.3s ease;
+}
+.activity-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
