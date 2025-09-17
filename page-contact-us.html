@@ -38,6 +38,28 @@
 	<!-- Preloader End -->
 	<!-- header Start -->
 	<header class="header-style-two">
+		<!-- Notification Popup -->
+<div id="notification-popup" 
+     style="
+        position: fixed;
+        top: 80px; /* En dessous de la navbar */
+        right: 20px;
+        background: #4CAF50;
+        color: white;
+        padding: 16px 24px;
+        border-radius: 8px;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+        z-index: 9999;
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.5s ease;
+        font-family: Arial, sans-serif;
+        font-size: 14px;
+        max-width: 300px;
+        text-align: center;
+     ">
+    ✅ Message envoyé avec succès !
+</div>
 		<div class="header-wrapper">
 			<div class="header-top-area bg-secondary-color d-none d-lg-block">
 				<div class="container">
@@ -399,28 +421,48 @@ Une production saine, locale, et durable — livrée dans votre boîte mail.</p>
 	<script src="js/jquery.v1.12.4.min.js"></script>
 	<script src="js/bootstrap.min.js"></script>
 	<script src="js/jquery-core-plugins.js"></script>
-	<script src="js/ajax-mail.js"></script>
+	
 	<script src="js/main.js"></script>
 
 	<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
 <script>
+// Fonction pour afficher le popup personnalisé
+function showNotification() {
+  const popup = document.getElementById('notification-popup');
+  popup.style.opacity = "1";
+  popup.style.visibility = "visible";
+
+  // Cache après 5 secondes
+  setTimeout(() => {
+    popup.style.opacity = "0";
+    popup.style.visibility = "hidden";
+  }, 5000);
+}
+
+// Envoie le formulaire avec Email.js
 (function() {
-  // Initialise Email.js avec ton User ID
-  emailjs.init("bk4VXwcpJalwxhqfo"); // ← Remplace par ton vrai User ID
+  emailjs.init("bk4VXwcpJalwxhqfo"); // ✅ Ton User ID
 
-  // Gestion du formulaire
-  document.getElementById('contactForm').addEventListener('submit', function(event) {
-    event.preventDefault();
+  const form = document.getElementById('contactForm');
+  if (form) {
+    form.addEventListener('submit', function(event) {
+      event.preventDefault();
 
-    // Envoie les données via le template
-    emailjs.sendForm('service_swkb3kb', 'template_iqs3oe7', this)
-      .then(() => {
-        alert("✅ Merci ! Votre message a été envoyé.");
-        document.getElementById('contactForm').reset();
-      }, (error) => {
-        alert("❌ Erreur d'envoi : " + JSON.stringify(error));
-      });
-  });
+      emailjs.sendForm('service_swkb3kb', 'template_iqs3oe7', this)
+        .then(() => {
+          // ✅ Réinitialise le formulaire
+          this.reset();
+          // ✅ Ferme reCAPTCHA
+          grecaptcha?.reset();
+          // ✅ Affiche NOTRE popup (pas alert!)
+          showNotification();
+        }, (error) => {
+          console.error("Erreur Email.js :", error);
+          alert("❌ Échec de l'envoi. Veuillez réessayer.");
+        });
+    });
+  }
 })();
 </script>
 
