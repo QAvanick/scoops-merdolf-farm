@@ -4515,3 +4515,40 @@ select {
   transform: translateY(-5px);
   box-shadow: 0 10px 25px rgba(0,0,0,0.15);
 }
+
+
+.client-item img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Réduction spécifique pour le logo Santa Lucia */
+img[src="/img/santa-removebg-preview.png"] {
+  width: 90px; /* Taille réduite */
+  height: 90px;
+  object-fit: contain; /* Conserve les proportions */
+  border-radius: 50%; /* Arrondi comme les autres */
+}
+
+
+
+
+.flag-icon {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  vertical-align: middle;
+  margin-right: 5px;
+}
+
+.flag-icon-fr {
+  background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Flag_of_France.svg/1200px-Flag_of_France.svg.png');
+}
+
+.flag-icon-us {
+  background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Flag_of_the_United_States.svg/1200px-Flag_of_the_United_States.svg.png');
+}

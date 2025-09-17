@@ -54,14 +54,15 @@
 							
 							</ul>
 							<div class="language">
-								<a class="language-btn" href="#"><i class="webexflaticon flaticon-internet"></i> Français</a>
-								<ul class="language-dropdown">
-									<li><a href="#">Français</a></li>
-									<li><a href="#">Anglais</a></li>
-									
-									
-								</ul>
-							</div>
+  <a class="language-btn" href="#" onclick="switchLanguage()" id="lang-toggle">
+    <i class="webexflaticon flaticon-internet"></i> 
+    <span id="lang-flag" class="flag-icon flag-icon-fr"></span>
+  </a>
+  <ul class="language-dropdown">
+    <li><a href="#" onclick="setLanguage('fr')"><span class="flag-icon flag-icon-fr"></span> Français</a></li>
+    <li><a href="#" onclick="setLanguage('en')"><span class="flag-icon flag-icon-us"></span> English</a></li>
+  </ul>
+</div>
 						</div>
 					</div>
 				</div>
@@ -131,24 +132,24 @@
             <ul>
               <!-- ✅ Accueil -->
               <li>
-                <a href="index.html" class="menu-link">Accueil</a>
+          <a href="/">Accueil</a>
               </li>
 
               <!-- ✅ A propos de nous -->
               <li>
-                <a href="/page-about">A propos de nous</a>
+                <a href="/fr/a-propos">A propos de nous</a>
               </li>
 
               <!-- ✅ Services (sans flèche) -->
               <li class=" no-arrow">
-                <a href="/Nos_Activités">Nos Activités</a>
+                <a href="/fr/nos-activites">Nos Activités</a>
               
               </li>
 
               <!-- ✅ Projects -->
              
 <li>
-                <a href="/page-contact-us">contactez-nous</a>
+                <a href="/fr/contact/">contactez-nous</a>
               </li>
              
             </ul>
@@ -403,8 +404,8 @@
 
       <!-- Texte du PDG -->
       <div class="col-md-6 col-lg-7">
-        <h5 class="subtitle-block">President Drecteur Generale du Groupe MERDOLF</h5>
-		 <h3 class="mrb-30 font-54">Une ferme au service de la nation</h3>
+        <h5 class="subtitle-block">Mot du President Drecteur Generale du Groupe MERDOLF</h5>
+		 <h4 class="mrb-30 font-54">Une ferme au service de la nation</h4>
        
         
         <p>
@@ -1463,7 +1464,7 @@
 				<div class="row">
 					<div class="owl-carousel client-items">
 						<div class="client-item">
-							<img src="img/clients/client1.png" alt="">
+							<img src="/img/santa-removebg-preview.png" alt="">
 						</div>
 						<div class="client-item">
 							<img src="img/clients/client2.png" alt="">
@@ -1477,9 +1478,7 @@
 						<div class="client-item">
 							<img src="img/clients/client5.png" alt="">
 						</div>
-						<div class="client-item">
-							<img src="img/clients/client6.png" alt="">
-						</div>
+						
 					</div>
 				</div>
 			</div>
@@ -1545,12 +1544,12 @@
 							<h5 class="widget-title text-white mrb-30">Liens utiles</h5>
 							<ul class="footer-widget-list">
 								<li><a href="/">Accueil</a></li>
-								<li><a href="/page-about">À propos</a></li>
-								<li><a href="/Nos_Activités">Nos Activités</a></li>
-								<li><a href="/CGV">CGV </a></li>
-								<li><a href="/CGU">CGU</a></li>
-								<li><a href="/politique">Politique</a></li>
-								<li><a href="/page-contact-us">Contact</a></li>
+								<li><a href="/fr/a-propos/">À propos</a></li>
+								<li><a href="/fr/nos-activites/">Nos Activités</a></li>
+								<li><a href="/fr/cgv">CGV </a></li>
+								<li><a href="/fr/cgu">CGU</a></li>
+								<li><a href="/fr/politique">Politique</a></li>
+								<li><a href="/fr/contact">Contact</a></li>
 							</ul>
 						</div>
 					</div>
@@ -1598,6 +1597,39 @@ Une production saine, locale, et durable — livrée dans votre boîte mail.</p>
 	<script type="text/javascript" src="revolution/js/extensions/revolution.extension.parallax.min.js"></script>
 	<script type="text/javascript" src="revolution/js/extensions/revolution.extension.slideanims.min.js"></script>
 	<script type="text/javascript" src="revolution/js/extensions/revolution.extension.video.min.js"></script>
+	<script>
+function setLanguage(lang) {
+  document.documentElement.lang = lang;
+  localStorage.setItem('site-lang', lang);
+  
+  // Met à jour le drapeau
+  const flag = document.getElementById('lang-flag');
+  if (lang === 'fr') {
+    flag.className = 'flag-icon flag-icon-fr';
+  } else {
+    flag.className = 'flag-icon flag-icon-us';
+  }
+
+  // Applique les traductions
+  translatePage();
+}
+
+function translatePage() {
+  // Exemple : traduire les textes
+  const currentLang = document.documentElement.lang || 'fr';
+  const texts = {
+    fr: { 'Accueil': 'Accueil', 'À propos': 'À propos' },
+    en: { 'Accueil': 'Home', 'À propos': 'About' }
+  };
+  
+  document.querySelectorAll('[data-lang]').forEach(el => {
+    const key = el.getAttribute('data-lang');
+    if (texts[currentLang][key]) {
+      el.textContent = texts[currentLang][key];
+    }
+  });
+}
+</script>
 </body>
 
 </html>
