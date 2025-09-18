@@ -11,6 +11,7 @@
 	<title>SCOOPS|| MERDOLF FARM </title>
 	<link href="/img/logo1.png" rel="shortcut icon" type="image/png">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+	<script src="/js/language-switcher.js"></script>
 	<!-- REVOLUTION LAYERS STYLES -->
 	<link rel="stylesheet" type="text/css" href="revolution/css/layers.css">
 	<link rel="stylesheet" type="text/css" href="revolution/css/settings.css">
@@ -54,13 +55,14 @@
 							
 							</ul>
 							<div class="language">
-  <a class="language-btn" href="#" onclick="switchLanguage()" id="lang-toggle">
+  <a class="language-btn" href="#" id="lang-toggle">
     <i class="webexflaticon flaticon-internet"></i> 
     <span id="lang-flag" class="flag-icon flag-icon-fr"></span>
+    <span id="lang-text"> Français</span>
   </a>
   <ul class="language-dropdown">
-    <li><a href="#" onclick="setLanguage('fr')"><span class="flag-icon flag-icon-fr"></span> Français</a></li>
-    <li><a href="#" onclick="setLanguage('en')"><span class="flag-icon flag-icon-us"></span> English</a></li>
+    <li><a href="#" onclick="switchToLanguage('fr')"><span class="flag-icon flag-icon-fr"></span> Français</a></li>
+    <li><a href="#" onclick="switchToLanguage('en')"><span class="flag-icon flag-icon-us"></span> English</a></li>
   </ul>
 </div>
 						</div>
@@ -78,7 +80,7 @@
 								<div class="d-flex align-items-center mr-3">
 									<i class="webexflaticon flaticon-mail-1 text-primary-color"></i>
 									<div>
-										<h6>Email Us</h6>
+										<h6>Envoyez-nous un e-mail</h6>
 										<a class="text-dark" href="mailto:Merdolffarm@gmail.com">Merdolffarm@gmail.com</a>
 									</div>
 								</div>
@@ -223,7 +225,7 @@
 					<div class="tp-caption title-slide color-white" id="slide-01-layer-1" data-x="['left','left','left','left']" data-hoffset="['39','39','39','39']" data-y="['middle','middle','middle','middle']" data-voffset="['-95','-65','-77','-90']" data-fontsize="['55','52','45','35']" data-lineheight="['60','57','50','40']" data-fontweight="['800','800','800','800']" data-width="none" data-height="none" data-whitespace="nowrap" data-type="text" data-responsive_offset="on" data-frames='[{"delay":200,"speed":2000,"frame":"0","from":"y:-50px;opacity:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":600,"frame":"999","to":"auto:auto;","ease":"Power3.easeInOut"}]' data-textAlign="['left','left','left','left']" data-paddingtop="[10,10,10,10]" data-paddingright="[0,0,0,0]" data-paddingbottom="[0,0,0,0" data-paddingleft="[0,0,0,0]" style="z-index: 16; white-space: nowrap;">Produisons local &<br> Nourrissons la Nation </div>
 					<!-- LAYER NR. 2 -->
 					<div class="tp-caption sub-title color-white" id="slide-01-layer-4" data-x="['left','left','left','left']" data-hoffset="['37','37','37','37']" data-y="['middle','middle','middle','middle']" data-voffset="['30','30','30','0']" data-fontsize="['20',18','18','18']" data-lineheight="['30','30','30','24']" data-fontweight="['400','400','400','400']" data-width="none" data-height="none" data-whitespace="nowrap" data-type="text" data-responsive_offset="on" data-frames='[{"from":"y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;","mask":"x:0px;y:[100%];s:inherit;e:inherit;","speed":2000,"to":"o:1;","delay":300,"ease":"Power4.easeInOut"},{"delay":"wait","speed":700,"to":"y:[100%];","mask":"x:inherit;y:inherit;s:inherit;e:inherit;","ease":"Power2.easeInOut"}]' data-textAlign="['left','left','left','left']" data-paddingtop="[0,0,0,0]" data-paddingright="[0,0,0,0]" data-paddingbottom="[0,0,0,0]" data-paddingleft="[0,0,0,0]" style="z-index: 17; white-space: nowrap;">Nous cultivons,élevons et transformons pour renforcer <br>la sécurité alimentaire du Cameroun </div>
-					<a href="#" target="_self" class="tp-caption cs-btn-one btn-gradient-color" data-frames='[{"delay":1500,"speed":500,"frame":"0","from":"y:50px;opacity:0;","to":"o:1;","ease":"Power0.easeIn"},{"delay":"wait","speed":500,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"}]' data-textAlign="['inherit','inherit','inherit','inherit']" data-x="['left','left','left','left']" data-hoffset="['36','36','36','36']" data-y="['middle','middle','middle','middle']" data-voffset="['130','130','120','80']" data-fontsize="['14','14','14','14']" data-width="['auto']" data-height="['auto']"> Notre Ferme</a>
+					<a href="/fr/ferme/" target="_self" class="tp-caption cs-btn-one btn-gradient-color" data-frames='[{"delay":1500,"speed":500,"frame":"0","from":"y:50px;opacity:0;","to":"o:1;","ease":"Power0.easeIn"},{"delay":"wait","speed":500,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"}]' data-textAlign="['inherit','inherit','inherit','inherit']" data-x="['left','left','left','left']" data-hoffset="['36','36','36','36']" data-y="['middle','middle','middle','middle']" data-voffset="['130','130','120','80']" data-fontsize="['14','14','14','14']" data-width="['auto']" data-height="['auto']"> Notre Ferme</a>
 					<!-- END LAYER LINK -->
 					<a href="#" target="_self" class="tp-caption cs-btn-one border btn-transparent" data-frames='[{"delay":1500,"speed":500,"frame":"0","from":"y:50px;opacity:0;","to":"o:1;","ease":"Power0.easeIn"},{"delay":"wait","speed":500,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"}]' data-textAlign="['inherit','inherit','inherit','inherit']" data-x="['left','left','left','left']" data-hoffset="['250','250','250','245']" data-y="['middle','middle','middle','middle']" data-voffset="['130','130','120','80']" data-fontsize="['14','14','14','14']" data-width="['auto']" data-height="['auto']">Contactez-nous </a>
 				</li>
@@ -583,8 +585,10 @@
 </section>
 	<!-- Team Section Start -->
 	<!-- Gallery Section Start -->
+<!-- Gallery Section Start -->
 <section class="pdt-110 pdb-90 bg-white">
   <div class="container">
+    <!-- Titre centré -->
     <div class="row">
       <div class="col-lg-12 text-center">
         <h5 class="subtitle-block">Galerie</h5>
@@ -595,12 +599,27 @@
       </div>
     </div>
 
-    <!-- Grille de photos et vidéos -->
+    <!-- Vidéo YouTube : Journée à la ferme (pleine largeur) -->
+    <div class="row mt-5 justify-content-center">
+      <div class="col-lg-8 col-md-10 col-12">
+        <div class="ratio ratio-16x9 shadow-sm rounded overflow-hidden">
+          <iframe 
+            src="https://www.youtube.com/embed/oAb1DOoGYUs?si=MhHGbbeShIUJyVb5" 
+            title="Vidéo - Journée à SCOOPS MERDOLF FARM" 
+            frameborder="0" 
+            allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+            allowfullscreen>
+          </iframe>
+        </div>
+      </div>
+    </div>
+
+    <!-- Grille des photos (3 colonnes) -->
     <div class="row mt-5" id="gallery-grid">
 
       <!-- Photo 1 : Porcelets -->
       <div class="col-md-6 col-lg-4 mb-4">
-        <div class="gallery-item position-relative overflow-hidden rounded shadow-sm">
+        <div class="gallery-item position-relative overflow-hidden rounded shadow-sm h-100">
           <img 
             src="/img/hum.jpg" 
             alt="Porcelets en bonne santé - SCOOPS MERDOLF FARM"
@@ -616,7 +635,7 @@
 
       <!-- Photo 2 : Poissons -->
       <div class="col-md-6 col-lg-4 mb-4">
-        <div class="gallery-item position-relative overflow-hidden rounded shadow-sm">
+        <div class="gallery-item position-relative overflow-hidden rounded shadow-sm h-100">
           <img 
             src="/img/poi-gallary.jpg" 
             alt="Pisciculture - Silure et Tilapia"
@@ -630,26 +649,9 @@
         </div>
       </div>
 
-      <!-- Vidéo YouTube : Journée à la ferme -->
-      <div class="col-md-6 col-lg-4 mb-4">
-        <div class="gallery-item position-relative overflow-hidden rounded shadow-sm">
-          <img 
-            src="https://img.youtube.com/vi/dQw4w9WgXcQ/hqdefault.jpg" 
-            alt="Vidéo - Journée à SCOOPS MERDOLF FARM"
-            class="img-fluid w-100" 
-            style="height: 220px; object-fit: cover; cursor: pointer;"
-            onclick="openVideoModal('https://www.youtube.com/embed/dQw4w9WgXcQ')"
-          >
-          <div class="overlay-dark"></div>
-          <div class="text-overlay text-white text-center position-absolute top-50 start-50 translate-middle">
-            <i class="fab fa-youtube me-2"></i> Regarder
-          </div>
-        </div>
-      </div>
-
       <!-- Photo 3 : Équipe travail -->
       <div class="col-md-6 col-lg-4 mb-4">
-        <div class="gallery-item position-relative overflow-hidden rounded shadow-sm">
+        <div class="gallery-item position-relative overflow-hidden rounded shadow-sm h-100">
           <img 
             src="/img/autre.jpg" 
             alt="Équipe SCOOPS MERDOLF FARM"
@@ -665,7 +667,7 @@
 
       <!-- Photo 4 : Agriculture -->
       <div class="col-md-6 col-lg-4 mb-4">
-        <div class="gallery-item position-relative overflow-hidden rounded shadow-sm">
+        <div class="gallery-item position-relative overflow-hidden rounded shadow-sm h-100">
           <img 
             src="/img/etanche.jpg" 
             alt="Culture de manioc et maïs"
@@ -679,22 +681,38 @@
         </div>
       </div>
 
-      <!-- Vidéo WhatsApp (lien vers une vidéo envoyée) -->
+      <!-- Vidéo WhatsApp -->
       <div class="col-md-6 col-lg-4 mb-4">
-        <a href="https://wa.me/237696124911?text=Bonjour%2C%20je%20souhaite%20voir%20une%20vidéo%20de%20votre%20ferme" 
+        <a href="/" 
            target="_blank"
-           class="gallery-item position-relative overflow-hidden rounded shadow-sm d-block">
+           class="gallery-item position-relative overflow-hidden rounded shadow-sm d-block h-100">
           <img 
-            src="/img/video-whatsapp.jpg" 
+            src="/img/gallery_p.jpg" 
             alt="Vidéo exclusive sur WhatsApp"
             class="img-fluid w-100" 
             style="height: 220px; object-fit: cover;"
           >
           <div class="overlay-dark"></div>
           <div class="text-overlay text-white text-center position-absolute top-50 start-50 translate-middle">
-            <i class="fab fa-whatsapp me-2"></i> Vidéo privée
+            
           </div>
         </a>
+      </div>
+
+      <!-- Photo 5 : Alevins (exemple supplémentaire pour remplir la ligne) -->
+      <div class="col-md-6 col-lg-4 mb-4">
+        <div class="gallery-item position-relative overflow-hidden rounded shadow-sm h-100">
+          <img 
+            src="/img/alvine2.jpg" 
+            alt="Production d’alevins - SCOOPS MERDOLF FARM"
+            class="img-fluid w-100" 
+            style="height: 220px; object-fit: cover;"
+          >
+          <div class="overlay-dark"></div>
+          <div class="text-overlay text-white text-center position-absolute top-50 start-50 translate-middle">
+            <i class="fas fa-fish me-2"></i> Alevins
+          </div>
+        </div>
       </div>
 
     </div>
@@ -708,7 +726,6 @@
   </div>
 </section>
 <!-- Gallery Section End -->
-
 <!-- Modal pour la vidéo YouTube -->
 <div class="modal fade" id="videoModal" tabindex="-1" aria-hidden="true">
   <div class="modal-dialog modal-lg">
@@ -1630,6 +1647,10 @@ function translatePage() {
   });
 }
 </script>
+
+
+
+
 </body>
 
 </html>
