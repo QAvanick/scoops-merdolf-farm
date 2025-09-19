@@ -9,7 +9,7 @@ const languageRoutes = {
   '/fr/cgv/': '/en/cgv/',
   '/fr/cgu/': '/en/cgu/',
   '/fr/politique/': '/en/privacy-policy/',
-  '/fr/farm/': '/en/farm/',
+  '/fr/ferme/': '/en/farm/',
 
   // EN → FR
   '/en/': '/',
@@ -19,7 +19,7 @@ const languageRoutes = {
   '/en/cgv/': '/fr/cgv/',
   '/en/cgu/': '/fr/cgu/',
   '/en/privacy-policy/': '/fr/politique/',
-  '/en/farm/': '/fr/farm/'
+  '/en/farm/': '/fr/ferme/'
 };
 
 // Fonction appelée au clic sur une langue
@@ -61,8 +61,20 @@ function updateLanguageDisplay(lang) {
   }
 }
 
-// Exécute au chargement de la page
 document.addEventListener('DOMContentLoaded', () => {
-  const savedLang = localStorage.getItem('site-lang') || 'fr';
-  updateLanguageDisplay(savedLang);
+  const langToggle = document.getElementById('lang-toggle');
+  const langDropdown = document.querySelector('.language-dropdown');
+
+  // Affiche/masque le menu déroulant au clic
+  langToggle.addEventListener('click', (e) => {
+    e.preventDefault();
+    langDropdown.classList.toggle('show');
+  });
+
+  // Ferme le menu si on clique en dehors
+  document.addEventListener('click', (e) => {
+    if (!langToggle.contains(e.target)) {
+      langDropdown.classList.remove('show');
+    }
+  });
 });
